@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="70.965 95.477 350.063 304.722" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style bx:fonts="Montserrat">@import url(https://fonts.googleapis.com/css2?family=Montserrat%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&amp;display=swap);</style>
+  </defs>
+  <g>
+    <g transform="matrix(1, 0, 0, 1, 11.074197, 10.409805)">
+      <text style="fill: rgb(255, 255, 255); font-family: Montserrat; font-size: 150px; font-weight: 700; stroke: rgb(0, 92, 48); white-space: pre;" x="73.644" y="295.682" dx="-13.753" dy="-1.219">G</text>
+      <text style="fill: rgb(255, 255, 255); font-family: Montserrat; font-size: 250px; font-weight: 700; stroke: rgb(0, 92, 48); white-space: pre;" x="159.591" y="327.021">C</text>
+      <text style="fill: rgb(255, 255, 255); font-family: Montserrat; font-size: 150px; font-weight: 700; stroke: rgb(0, 92, 48); white-space: pre;" x="300" y="292.913">C</text>
+    </g>
+  </g>
+</svg>
