@@ -35,15 +35,20 @@ export function GameView(props: GameViewProps) {
       </TeamsContainer>
       <BroadcastsContainer>
         {props.broadcasts.map((broadcast) => {
-          // return broadcast.logo ? (
-          //   <>
-          //     <span> | </span>
-          //     <img src={broadcast.logo} />
-          //   </>
-          // ) : (
-          //   <span> | {broadcast.name}</span>
-          // );
-          return <span> | {broadcast.name} </span>;
+          return broadcast.name !== "Sem transmissão" ? (
+            <a
+              href={broadcast.link ?? "#"}
+              target={broadcast.name !== "Sem transmissão" ? "_blank" : ""}
+            >
+              {broadcast.logo ? (
+                <img src={broadcast.logo} />
+              ) : (
+                <span>{broadcast.name}</span>
+              )}
+            </a>
+          ) : (
+            <span>{broadcast.name}</span>
+          );
         })}
       </BroadcastsContainer>
     </GameViewContainer>
