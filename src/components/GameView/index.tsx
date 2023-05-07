@@ -1,3 +1,4 @@
+import { IGame } from "../../interfaces/IGame";
 import {
   BroadcastsContainer,
   GameViewContainer,
@@ -5,17 +6,20 @@ import {
   TeamsContainer,
 } from "./styles";
 
-export function GameView() {
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface GameViewProps extends IGame {}
+
+export function GameView(props: GameViewProps) {
   return (
     <GameViewContainer>
-      <p>Competição</p>
+      <p>{props.competition.name}</p>
       <TeamsContainer>
         <TeamContainer>
           <img
-            src="https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
-            alt=""
+            src={props.team_home.logo}
+            alt={`${props.team_home.name} - Logo`}
           />
-          <p>São Paulo</p>
+          <p>{props.team_home.name}</p>
         </TeamContainer>
         <div className="clash">
           <span>X</span>
@@ -23,14 +27,24 @@ export function GameView() {
         </div>
         <TeamContainer>
           <img
-            src="https://upload.wikimedia.org/wikipedia/pt/3/34/Esporte_Clube_Vit%C3%B3ria_logo.png"
-            alt=""
+            src={props.team_away.logo}
+            alt={`${props.team_away.name} - Logo`}
           />
-          <p>Vitória</p>
+          <p>{props.team_away.name}</p>
         </TeamContainer>
       </TeamsContainer>
       <BroadcastsContainer>
-        <span>HBO Max</span> | <span>Globo</span> | <span>Premiere</span>
+        {props.broadcasts.map((broadcast) => {
+          // return broadcast.logo ? (
+          //   <>
+          //     <span> | </span>
+          //     <img src={broadcast.logo} />
+          //   </>
+          // ) : (
+          //   <span> | {broadcast.name}</span>
+          // );
+          return <span> | {broadcast.name} </span>;
+        })}
       </BroadcastsContainer>
     </GameViewContainer>
   );

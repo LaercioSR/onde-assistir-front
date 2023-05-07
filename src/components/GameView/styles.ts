@@ -12,6 +12,10 @@ export const GameViewContainer = styled.div`
 
 export const BroadcastsContainer = styled.div`
   align-self: center;
+
+  img {
+    height: 16px;
+  }
 `
 
 export const TeamsContainer = styled.div`
