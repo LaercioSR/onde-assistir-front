@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.main`
+  margin: 5rem 0 0 0;
   padding: 5rem 10rem;
 
   @media (max-width: 768px) {
@@ -9,7 +10,7 @@ export const HomeContainer = styled.main`
 `
 
 export const DayContainer = styled.div`
-  margin: 0 0 1rem 0;
+  margin: 1rem 0;
 `
 
 export const GamesListContainer = styled.div`
@@ -19,7 +20,11 @@ export const GamesListContainer = styled.div`
   list-style: none;
   margin: 1rem 0 2rem 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 900px) {
     grid-template-columns: initial;
   }
 `

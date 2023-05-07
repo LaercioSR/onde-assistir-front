@@ -2,9 +2,14 @@ import { HeaderContainer } from "./styles";
 import logo from "../../assets/images/logo_simple_2.svg";
 
 export function Header() {
+  function handleTopPage() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   return (
     <HeaderContainer>
-      <img src={logo} alt="GameCast Central logo" />
+      <img src={logo} alt="GameCast Central logo" onClick={handleTopPage} />
       <nav></nav>
     </HeaderContainer>
   );
