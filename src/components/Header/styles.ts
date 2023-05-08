@@ -7,6 +7,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   padding: 1rem 2rem;
   background-color: ${(props) => props.theme["base-title"]};
+  height: 3.5rem;
 
   position: fixed;
   top: 0;
@@ -15,7 +16,7 @@ export const HeaderContainer = styled.header`
   z-index: 999;
 
   img {
-    height: 3rem;
+    height: 2rem;
     margin: 0 1.5rem 0 0;
     cursor: pointer;
   }

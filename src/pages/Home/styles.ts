@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.main`
-  margin: 5rem 0 0 0;
   padding: 5rem 10rem;
 
   @media (max-width: 768px) {

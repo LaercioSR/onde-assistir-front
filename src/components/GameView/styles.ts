@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const GameViewContainer = styled.div`
   display: flex;
   flex-direction: column;
+  box-shadow: 4px 4px 41px 20px ${(props) => props.theme["base-shadow"]};
 
   background-color: ${(props) => props.theme["white"]};
   border-radius: 15px;
@@ -51,6 +52,7 @@ export const TeamsContainer = styled.div`
 
 export const TeamContainer = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
 

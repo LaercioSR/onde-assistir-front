@@ -3,6 +3,7 @@ export const defaultTheme = {
   
   background: "#F5F7FB",
 
+  "base-shadow": "#6161610d",
   "base-title": "#0D101A",
   "base-input": "#262931",
   "base-subtitle": "#353535",
