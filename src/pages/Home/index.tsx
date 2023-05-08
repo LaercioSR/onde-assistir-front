@@ -16,12 +16,22 @@ export function Home() {
     api.get("games/date").then((response) => setGames(response.data));
   }, []);
 
+  function transformeDate(date: string): string {
+    const today = new Date();
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    if (date === today.toISOString().substring(0, 10)) return "Hoje";
+    if (date === tomorrow.toISOString().substring(0, 10)) return "Amanhã";
+    return new Date(date).toLocaleDateString("pt-BR");
+  }
+
   return (
     <HomeContainer>
       {games.map(({ date, games }) => {
         return (
           <DayContainer key={date}>
-            <h1>{date}</h1>
+            <h1>{transformeDate(date)}</h1>
             <GamesListContainer>
               {games.map((game) => {
                 return <GameView key={game.id} {...game} />;
@@ -30,26 +40,6 @@ export function Home() {
           </DayContainer>
         );
       })}
-      {/* <DayContainer>
-        <h1>Hoje</h1>
-        <GamesListContainer>
-          <GameView></GameView>
-          <GameView></GameView>
-          <GameView></GameView>
-          <GameView></GameView>
-          <GameView></GameView>
-        </GamesListContainer>
-      </DayContainer>
-      <DayContainer>
-        <h1>Amanhã</h1>
-        <GamesListContainer>
-          <GameView></GameView>
-          <GameView></GameView>
-          <GameView></GameView>
-          <GameView></GameView>
-          <GameView></GameView>
-        </GamesListContainer>
-      </DayContainer> */}
     </HomeContainer>
   );
 }

@@ -40,6 +40,7 @@ export function GameView(props: GameViewProps) {
             <a
               href={broadcast.link ?? "#"}
               target={broadcast.name !== "Sem transmissão" ? "_blank" : ""}
+              key={broadcast.name}
             >
               {broadcast.logo ? (
                 <img src={broadcast.logo} />
@@ -48,7 +49,7 @@ export function GameView(props: GameViewProps) {
               )}
             </a>
           ) : (
-            <span>{broadcast.name}</span>
+            <span key={broadcast.name}>{broadcast.name}</span>
           );
         })}
       </BroadcastsContainer>
