@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
@@ -12,22 +13,34 @@ export const HeaderContainer = styled.header`
   left: 0;
   right: 0;
   z-index: 999;
-  
+
   img {
     height: 3rem;
+    margin: 0 1.5rem 0 0;
     cursor: pointer;
   }
 
   nav {
     display: flex;
     gap: 0.5rem;
+    align-items: center;
   }
 
   @media (max-width: 768px) {
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
 
     img {
-      width: 6rem;
+      height: 2.5rem;
     }
   }
+`;
+
+export const SelectContainer = styled.select`
+  width: 10rem;
+  height: 2.5rem;
+  background-color: ${(props) => props.theme["base-input"]};
+  color: ${(props) => props.theme["base-input-text"]};
+  border-radius: 10px;
+  border: none;
+  padding: 0 0.7rem;
 `;

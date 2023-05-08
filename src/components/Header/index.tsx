@@ -9,8 +9,9 @@ export function Header() {
 
   return (
     <HeaderContainer>
-      <img src={logo} alt="Onde Assistir logo" onClick={handleTopPage} />
-      <nav></nav>
+      <nav>
+        <img src={logo} alt="Onde Assistir logo" onClick={handleTopPage} />
+      </nav>
     </HeaderContainer>
   );
 }

@@ -15,6 +15,7 @@ export const BroadcastsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 0.7rem;
 
   a {
     color: inherit;
@@ -22,14 +23,11 @@ export const BroadcastsContainer = styled.div`
   }
 
   img {
-    width: 6rem;
-    max-height: 1.5rem;
+    height: 1.2rem;
     filter: grayscale(100%) saturate(20%) sepia(30%) hue-rotate(90deg);
-    transition: transform 0.4s ease-in-out;
 
     &:hover {
       filter: none;
-      transform: scale(1.1);
     }
   }
 `;
