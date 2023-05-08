@@ -5,6 +5,7 @@ import {
   TeamContainer,
   TeamsContainer,
 } from "./styles";
+import x from "../../assets/images/x.svg";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface GameViewProps extends IGame {}
@@ -22,7 +23,7 @@ export function GameView(props: GameViewProps) {
           <p>{props.team_home.name}</p>
         </TeamContainer>
         <div className="clash">
-          <span>X</span>
+          <img src={x} alt="X clash" />
           <span className="time">16:00</span>
         </div>
         <TeamContainer>

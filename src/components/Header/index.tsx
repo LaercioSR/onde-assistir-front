@@ -1,5 +1,5 @@
 import { HeaderContainer } from "./styles";
-import logo from "../../assets/images/logo_simple_2.svg";
+import logo from "../../assets/images/logo.svg";
 
 export function Header() {
   function handleTopPage() {

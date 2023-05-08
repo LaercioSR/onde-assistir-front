@@ -1,25 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="37.652 95.477 424.253 304.722" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
-  <defs>
-    <style bx:fonts="Montserrat">
-      @import url(https://fonts.googleapis.com/css2?family=Montserrat%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&amp;display=swap);
-    </style>
-  </defs>
-  <ellipse style="fill: rgb(0, 92, 48); paint-order: fill; stroke-width: 8px;" cx="249.723" cy="245.072" rx="212.071"
-    ry="115.393" />
-  <g>
-    <g transform="matrix(1, 0, 0, 1, 11.074197, 10.409805)">
-      <text
-        style="fill: rgb(255, 255, 255); font-family: Montserrat; font-size: 150px; font-weight: 700; white-space: pre;"
-        x="73.644" y="295.682" dx="-13.753" dy="-1.219">G</text>
-      <text
-        style="fill: rgb(255, 255, 255); font-family: Montserrat; font-size: 250px; font-weight: 700; white-space: pre;"
-        x="159.591" y="327.021">C</text>
-      <text
-        style="fill: rgb(255, 255, 255); font-family: Montserrat; font-size: 150px; font-weight: 700; white-space: pre;"
-        x="300" y="292.913">C</text>
-    </g>
-  </g>
-  <ellipse style="stroke-width: 5px; paint-order: fill; fill: none; stroke: rgb(255, 255, 255);" cx="249.834"
-    cy="245.293" rx="212.071" ry="115.393" />
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="19.3241" y="0.648193" width="26.4117" height="26.4117" rx="4" transform="rotate(45 19.3241 0.648193)" fill="#90C200"/>
+<rect x="19.5237" y="4.74268" width="20.339" height="20.9035" rx="10.1695" transform="rotate(45 19.5237 4.74268)" fill="white"/>
+<rect x="19.5237" y="4.74268" width="20.339" height="20.9035" rx="10.1695" transform="rotate(45 19.5237 4.74268)" fill="white"/>
+<rect x="19.5237" y="12.749" width="9.01623" height="9.58077" rx="4.50812" transform="rotate(45 19.5237 12.749)" fill="white"/>
+<rect x="19.5237" y="12.749" width="9.01623" height="9.58077" rx="4.50812" transform="rotate(45 19.5237 12.749)" fill="#264339"/>
 </svg>

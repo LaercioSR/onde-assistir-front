@@ -1,15 +1,13 @@
 export const defaultTheme = {
   white: "#FFF",
   
-  background: "#CFCFCF",
+  background: "#F0F0F0",
 
-  "base-title": "#2B2B2B",
-  "base-subtitle": "#474747",
-  "base-text": "#707070",
-  "base-label": "#999999",
-  "base-hover": "#B2B2B2",
-  "base-button": "#D6D6D6",
-  "base-input": "#EDEDED",
+  "base-title": "#0D101A",
+  "base-input": "#262931",
+  "base-subtitle": "#353535",
+  "base-input-text": "#888888",
+  "base-text": "#969698",
   "base-card": "#F2F2F2",
 
   "green-dark": "#005C30",

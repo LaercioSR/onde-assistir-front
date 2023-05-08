@@ -4,8 +4,8 @@ export const GameViewContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  background-color: ${(props) => props.theme["base-input"]};
-  border-radius: 10px;
+  background-color: ${(props) => props.theme["white"]};
+  border-radius: 15px;
   padding: 1rem;
   width: 100%;
 `;
@@ -24,6 +24,13 @@ export const BroadcastsContainer = styled.div`
   img {
     width: 6rem;
     max-height: 1.5rem;
+    filter: grayscale(100%) saturate(20%) sepia(30%) hue-rotate(90deg);
+    transition: transform 0.4s ease-in-out;
+
+    &:hover {
+      filter: none;
+      transform: scale(1.1);
+    }
   }
 `;
 
@@ -51,5 +58,10 @@ export const TeamContainer = styled.div`
 
   img {
     height: 5rem;
+  }
+
+  p {
+    color: ${(props) => props.theme["base-subtitle"]};
+    font-weight: 500;
   }
 `;

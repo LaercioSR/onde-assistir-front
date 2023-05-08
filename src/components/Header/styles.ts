@@ -4,8 +4,8 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
-  background-color: ${(props) => props.theme["green-dark"]};
+  padding: 1rem 2rem;
+  background-color: ${(props) => props.theme["base-title"]};
 
   position: fixed;
   top: 0;
@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header`
   z-index: 999;
   
   img {
-    width: 10rem;
+    height: 3rem;
     cursor: pointer;
   }
 

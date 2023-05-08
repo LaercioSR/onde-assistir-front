@@ -23,4 +23,13 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-size: 1rem;
   }
+
+  h1 {
+    color: ${(props) => props.theme["base-title"]};
+  }
+
+  input {
+    background-color: ${(props) => props.theme["base-input"]};
+    color: ${(props) => props.theme["base-input-text"]};
+  }
 `;
