@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <HeaderContainer>
-      <img src={logo} alt="GameCast Central logo" onClick={handleTopPage} />
+      <img src={logo} alt="Onde Assistir logo" onClick={handleTopPage} />
       <nav></nav>
     </HeaderContainer>
   );
