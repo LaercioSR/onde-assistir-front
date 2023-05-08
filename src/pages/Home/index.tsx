@@ -17,13 +17,28 @@ export function Home() {
   }, []);
 
   function transformeDate(date: string): string {
+    const weekDays = [
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado",
+    ];
+
+    const newDate = new Date(date);
     const today = new Date();
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
 
-    if (date === today.toISOString().substring(0, 10)) return "Hoje";
-    if (date === tomorrow.toISOString().substring(0, 10)) return "Amanhã";
-    return new Date(date).toLocaleDateString("pt-BR");
+    if (newDate.toDateString() === today.toDateString()) return "Hoje";
+    if (newDate.toDateString() === tomorrow.toDateString()) return "Amanhã";
+
+    const weekDay = weekDays[newDate.getDay()];
+    const dateFormatted = newDate.toLocaleDateString("pt-BR");
+
+    return `${weekDay}, ${dateFormatted}`;
   }
 
   return (
