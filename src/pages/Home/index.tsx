@@ -27,7 +27,11 @@ export function Home() {
       "Sábado",
     ];
 
-    const newDate = new Date(date);
+    const newDate = new Date(
+      Number(date.substring(0, 4)),
+      Number(date.substring(5, 7)) - 1,
+      Number(date.substring(8, 10))
+    );
     const today = new Date();
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);

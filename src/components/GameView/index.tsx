@@ -24,7 +24,7 @@ export function GameView(props: GameViewProps) {
         </TeamContainer>
         <div className="clash">
           <img src={x} alt="X clash" />
-          <span className="time">16:00</span>
+          <span className="time">{props.time}</span>
         </div>
         <TeamContainer>
           <img
