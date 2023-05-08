@@ -36,7 +36,7 @@ export const BroadcastsContainer = styled.div`
 export const TeamsContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 1.5rem 0;
 
   .clash {
     display: flex;
