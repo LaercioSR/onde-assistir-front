@@ -1,16 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const HomeContainer = styled.main`
-  padding: 5rem 10rem;
-
-  @media (max-width: 768px) {
-    padding: 0.5rem 1rem;
-  }
-`
+export const HomeContainer = styled.main``;
 
 export const DayContainer = styled.div`
   margin: 1rem 0;
-`
+`;
 
 export const GamesListContainer = styled.div`
   display: grid;
@@ -26,4 +20,4 @@ export const GamesListContainer = styled.div`
   @media (max-width: 900px) {
     grid-template-columns: initial;
   }
-`
+`;

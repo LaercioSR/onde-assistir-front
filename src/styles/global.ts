@@ -32,4 +32,16 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${(props) => props.theme["base-input"]};
     color: ${(props) => props.theme["base-input-text"]};
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  main {
+    padding: 5rem 10rem;
+
+    @media (max-width: 768px) {
+      padding: 4rem 1rem 0 1rem;
+    }
+  }
 `;
