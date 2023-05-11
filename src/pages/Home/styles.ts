@@ -1,3 +1,4 @@
+import { Autocomplete } from "@mui/material";
 import styled from "styled-components";
 
 export const HomeContainer = styled.main``;
@@ -20,4 +21,18 @@ export const GamesListContainer = styled.div`
   @media (max-width: 900px) {
     grid-template-columns: initial;
   }
+`;
+
+export const SelectContainer = styled(Autocomplete)`
+  /* width: 10rem;
+  height: 2.5rem;
+  background-color: ${(props) => props.theme["base-input"]};
+  color: ${(props) => props.theme["base-input-text"]};
+  border-radius: 10px;
+  border: none;
+  padding: 0 0.7rem; */
+  width: 15rem;
+  height: 2.5rem;
+  background-color: white;
+  border-radius: 10px;
 `;

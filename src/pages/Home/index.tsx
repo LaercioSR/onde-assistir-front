@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
 import { GameView } from "../../components/GameView";
 import { IGame } from "../../interfaces/IGame";
-import { DayContainer, GamesListContainer, HomeContainer } from "./styles";
+import {
+  DayContainer,
+  GamesListContainer,
+  HomeContainer,
+  SelectContainer,
+} from "./styles";
 import { api } from "../../services/api";
+import { ITeamORCompetition } from "../../interfaces/ITeamOrCompetition";
+import { AutocompleteChangeReason, Box, TextField } from "@mui/material";
 
 interface GamesByDate {
   date: string;
@@ -11,10 +18,29 @@ interface GamesByDate {
 
 export function Home() {
   const [games, setGames] = useState<GamesByDate[]>([]);
+  const [competitions, setCompetitions] = useState<ITeamORCompetition[]>([]);
+  const [competition, setCompetition] = useState<ITeamORCompetition | null>(
+    null
+  );
 
   useEffect(() => {
-    api.get("games/date").then((response) => setGames(response.data));
+    let filter = "?";
+    if (competition) {
+      filter += `competition=${competition.id}`;
+    }
+    api.get(`games/date${filter}`).then((response) => setGames(response.data));
+  }, [competition]);
+  useEffect(() => {
+    api.get("competitions").then((response) => setCompetitions(response.data));
   }, []);
+
+  function handleCompetition(
+    event: React.SyntheticEvent<Element, Event>,
+    value: unknown,
+    reason: AutocompleteChangeReason
+  ) {
+    setCompetition(value as ITeamORCompetition);
+  }
 
   function transformeDate(date: string): string {
     const weekDays = [
@@ -47,6 +73,42 @@ export function Home() {
 
   return (
     <HomeContainer>
+      <SelectContainer
+        id="competitions"
+        value={competition}
+        onChange={handleCompetition}
+        size="small"
+        options={competitions}
+        autoHighlight
+        getOptionLabel={(option) => (option as ITeamORCompetition).name}
+        renderOption={(props, option) => (
+          <Box
+            component="li"
+            sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
+            {...props}
+          >
+            <img
+              loading="lazy"
+              width="30"
+              height="30"
+              src={(option as ITeamORCompetition).logo}
+              srcSet={(option as ITeamORCompetition).logo}
+              alt=""
+            />
+            {(option as ITeamORCompetition).name}
+          </Box>
+        )}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            label="Filtre uma competição"
+            inputProps={{
+              ...params.inputProps,
+              autoComplete: "new-password", // disable autocomplete and autofill
+            }}
+          />
+        )}
+      />
       {games.map(({ date, games }) => {
         return (
           <DayContainer key={date}>

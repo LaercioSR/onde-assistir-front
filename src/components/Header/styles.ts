@@ -34,13 +34,3 @@ export const HeaderContainer = styled.header`
     }
   }
 `;
-
-export const SelectContainer = styled.select`
-  width: 10rem;
-  height: 2.5rem;
-  background-color: ${(props) => props.theme["base-input"]};
-  color: ${(props) => props.theme["base-input-text"]};
-  border-radius: 10px;
-  border: none;
-  padding: 0 0.7rem;
-`;
