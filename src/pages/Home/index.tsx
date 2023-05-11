@@ -40,6 +40,8 @@ export function Home() {
     value: unknown,
     reason: AutocompleteChangeReason
   ) {
+    console.log(event);
+    console.log(reason);
     setCompetition(value as ITeamORCompetition);
   }
 
