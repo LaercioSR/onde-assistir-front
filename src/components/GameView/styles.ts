@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const GameViewContainer = styled.div`
@@ -50,7 +51,7 @@ export const TeamsContainer = styled.div`
   }
 `;
 
-export const TeamContainer = styled.div`
+export const TeamContainer = styled(Link)`
   display: flex;
   width: 100%;
   flex-direction: column;

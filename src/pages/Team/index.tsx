@@ -9,14 +9,18 @@ import { GamesListContainer } from "../Home/styles";
 export function Team() {
   const { name } = useParams();
   const [games, setGames] = useState<IGame[]>([]);
+  const [teamName, setTeamName] = useState<string>("");
 
   useEffect(() => {
-    api.get(`teams/${name}`).then((response) => setGames(response.data.games));
-  }, []);
+    api.get(`teams/${name}`).then((response) => {
+      setGames(response.data.games);
+      setTeamName(response.data.name);
+    });
+  }, [name]);
 
   return (
     <TeamPageContainer>
-      <h1>{name}</h1>
+      <h1>{teamName}</h1>
 
       {games.length > 0 ? <GameView {...games[0]} /> : ""}
       {games.length > 1 ? (

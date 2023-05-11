@@ -7,7 +7,6 @@ import {
 } from "./styles";
 import x from "../../assets/images/x.svg";
 import { normalizeString } from "../../utils/normalizeString";
-import { Link } from "react-router-dom";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface GameViewProps extends IGame {}
@@ -17,14 +16,12 @@ export function GameView(props: GameViewProps) {
     <GameViewContainer>
       <p>{props.competition.name}</p>
       <TeamsContainer>
-        <TeamContainer>
-          <Link to={`/${normalizeString(props.team_home.name)}`}>
-            <img
-              src={props.team_home.logo}
-              alt={`${props.team_home.name} - Logo`}
-            />
-            <p>{props.team_home.name}</p>
-          </Link>
+        <TeamContainer to={`/${normalizeString(props.team_home.name)}`}>
+          <img
+            src={props.team_home.logo}
+            alt={`${props.team_home.name} - Logo`}
+          />
+          <p>{props.team_home.name}</p>
         </TeamContainer>
         <div className="clash">
           <img src={x} alt="X clash" />
@@ -32,14 +29,12 @@ export function GameView(props: GameViewProps) {
             {props.time ?? new Date(props.date ?? "").toLocaleString("pt-BR")}
           </span>
         </div>
-        <TeamContainer>
-          <Link to={`/${normalizeString(props.team_away.name)}`}>
-            <img
-              src={props.team_away.logo}
-              alt={`${props.team_away.name} - Logo`}
-            />
-            <p>{props.team_away.name}</p>
-          </Link>
+        <TeamContainer to={`/${normalizeString(props.team_home.name)}`}>
+          <img
+            src={props.team_away.logo}
+            alt={`${props.team_away.name} - Logo`}
+          />
+          <p>{props.team_away.name}</p>
         </TeamContainer>
       </TeamsContainer>
       <BroadcastsContainer>
