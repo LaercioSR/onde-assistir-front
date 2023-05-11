@@ -24,15 +24,12 @@ export const GamesListContainer = styled.div`
 `;
 
 export const SelectContainer = styled(Autocomplete)`
-  /* width: 10rem;
-  height: 2.5rem;
-  background-color: ${(props) => props.theme["base-input"]};
-  color: ${(props) => props.theme["base-input-text"]};
-  border-radius: 10px;
-  border: none;
-  padding: 0 0.7rem; */
   width: 15rem;
   height: 2.5rem;
   background-color: white;
   border-radius: 10px;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
