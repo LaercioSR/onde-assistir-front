@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const GameViewContainer = styled.div`
+export const GameViewContainer = styled("div")`
   display: flex;
   flex-direction: column;
   box-shadow: 4px 4px 41px 20px ${(props) => props.theme["base-shadow"]};
@@ -10,9 +10,13 @@ export const GameViewContainer = styled.div`
   border-radius: 15px;
   padding: 1rem;
   width: 100%;
+
+  .clash {
+    width: 100%;
+  }
 `;
 
-export const BroadcastsContainer = styled.div`
+export const BroadcastsContainer = styled("div")`
   width: 100%;
   display: flex;
   align-items: center;
@@ -34,7 +38,7 @@ export const BroadcastsContainer = styled.div`
   }
 `;
 
-export const TeamsContainer = styled.div`
+export const TeamsContainer = styled("div")`
   display: flex;
   justify-content: space-between;
   margin: 1.5rem 0;

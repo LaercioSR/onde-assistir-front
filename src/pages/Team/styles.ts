@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TeamPageContainer = styled.main`
+export const TeamPageContainer = styled("main")`
   display: flex;
   flex-direction: column;
 

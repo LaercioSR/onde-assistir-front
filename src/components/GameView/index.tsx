@@ -26,10 +26,15 @@ export function GameView(props: GameViewProps) {
         <div className="clash">
           <img src={x} alt="X clash" />
           <span className="time">
-            {props.time ?? new Date(props.date ?? "").toLocaleString("pt-BR")}
+            {props.time ??
+              new Intl.DateTimeFormat("pt-BR", {
+                dateStyle: "full",
+                timeStyle: "short",
+                timeZone: "America/Sao_Paulo",
+              }).format(new Date(props.date ?? ""))}
           </span>
         </div>
-        <TeamContainer to={`/${normalizeString(props.team_home.name)}`}>
+        <TeamContainer to={`/${normalizeString(props.team_away.name)}`}>
           <img
             src={props.team_away.logo}
             alt={`${props.team_away.name} - Logo`}

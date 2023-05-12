@@ -1,13 +1,13 @@
 import { Autocomplete } from "@mui/material";
 import styled from "styled-components";
 
-export const HomeContainer = styled.main``;
+export const HomeContainer = styled("main")``;
 
-export const DayContainer = styled.div`
+export const DayContainer = styled("div")`
   margin: 1rem 0;
 `;
 
-export const GamesListContainer = styled.div`
+export const GamesListContainer = styled("div")`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
