@@ -12,10 +12,19 @@ export function Team() {
   const [teamName, setTeamName] = useState<string>("");
 
   useEffect(() => {
-    api.get(`teams/${name}`).then((response) => {
-      setGames(response.data.games);
-      setTeamName(response.data.name);
-    });
+    api
+      .get(`teams/${name}`)
+      .then((response) => {
+        setGames(response.data.games);
+        setTeamName(response.data.name);
+      })
+      .catch((err) => {
+        console.log(err.response.status);
+        if (err.response.status === 404) {
+          window.location.href = "/404";
+          return;
+        }
+      });
   }, [name]);
 
   return (
