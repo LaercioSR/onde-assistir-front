@@ -17,7 +17,7 @@ Onde Assistir (Where to Watch) is a platform with broadcasts of sports games (ma
 
 ![Screenshot](https://raw.githubusercontent.com/LaercioSR/onde-assistir-front/main/public/screenshot.png)
 
-Access the platform at: <http://ondeassistir.laerciorios.com/>
+Access the platform at: <https://ondeassistir.laerciorios.com/>
 
 The platform emerged as an academic project in the Computer Engineering course (UEFS) in the Network Programming (WEB Programming) discipline taught by Professor João Rocha and continued as a personal challenge and an opportunity to improve new knowledge.
 
@@ -26,7 +26,7 @@ For more details about the discipline, see: [EXA844](https://sites.google.com/a/
 Onde Assistir has an API, where all data from teams, games, and their transmissions is consumed. See more about the API in:
 
 * [GitHub](https://github.com/LaercioSR/onde-assistir-api)
-* [Documentation](http://ondeassistir.laerciorios.com/api/docs)
+* [Documentation](https://ondeassistir.laerciorios.com/api/docs)
 
 ## How to Run
 
@@ -43,12 +43,16 @@ $ git clone git@github.com:LaercioSR/onde-assistir-front.git
 # Access the project folder in terminal/cmd
 $ cd onde-assistir-front
 
+# Copy the .env
+$ cp .env.example .env
+# After that it is necessary to fill the .env.
+
 # Install the dependencies
 $ npm install
 
 # Run the application with the following command
 $ npm run dev
-# If everything is correct, the application can be accessed through the URL http://localhost:5173
+# If everything is correct, the application can be accessed through the URL https://localhost:5173
 ```
 
 ## Technologies
