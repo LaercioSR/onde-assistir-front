@@ -21,7 +21,7 @@ Access the platform at: <http://ondeassistir.laerciorios.com/>
 
 The platform emerged as an academic project in the Computer Engineering course (UEFS) in the Network Programming (WEB Programming) discipline taught by Professor João Rocha and continued as a personal challenge and an opportunity to improve new knowledge.
 
-For more details about the discipline, see: [EXA844](https://sites.google.com/a/ecomp.uefs.br/joao/home/courses/exa844)
+For more details about the discipline, see: [EXA844](https://sites.google.com/a/ecomp.uefs.br/joao/home/courses/exa844#vitrinedev)
 
 Onde Assistir has an API, where all data from teams, games, and their transmissions is consumed. See more about the API in:
 
